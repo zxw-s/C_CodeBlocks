@@ -1,0 +1,139 @@
+﻿# 放到 sln 解决方案所在根目录
+# 作用：忽略 VS 生成的缓存、编译二进制文件、用户本地配置，只提交源代码和项目配置
+
+# ====================== 通用系统忽略 ======================
+# Windows
+Thumbs.db
+Desktop.ini
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+# Linux
+*~
+
+# ===================== 日志、临时文件 =====================
+*.log
+*.tmp
+*.temp
+*.bak
+*.swp
+*.swo
+
+# ====================== VSCode 专用缓存 ======================
+# .vscode/
+# 注意：如果你不要保存tasks.json/launch.json到仓库，打开上面一行注释，同时注释或删除下面这三行
+# !.vscode/tasks.json
+# !.vscode/launch.json
+# !.vscode/c_cpp_properties.json
+.vscode/.env
+.vscode/extensions.json
+.vscode/settings.jsonc
+.vscode/**/.git
+*.code-workspace
+# 临时缓存
+.vs/
+*.log
+
+# 构建输出目录
+build/
+bin/
+obj/
+dist/
+
+# 本地用户配置
+*.csproj.user
+
+# ====================== Visual Studio ====================================
+.vs/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+# 编译产物
+[Dd]ebug/
+[Dd]ebugPublic/
+[Rr]elease/
+[Rr]eleases/
+x64/
+x86/
+[Ww][Ii][Nn]32/
+ARM/
+# 项目缓存
+*.vcxproj.user
+*.csproj.user
+# 自定义输出文件夹
+bin/
+obj/
+
+# NuGet
+packages/
+*.nupkg
+
+
+# ====================== CLion / JetBrains IDE 缓存 ================
+cmake-build-*/
+cmake-build-release/
+cmake-build-debug/
+cmake-build-relwithdebinfo/
+cmake-build-minsizerel/
+# 保留 .idea 里的运行配置（可选，需要就注释上面一行，放开下面三行）
+.idea/
+#!.idea/runConfigurations/
+#!.idea/modules.xml
+#!.idea/misc.xml
+*.iml
+*.iws
+*.ipr
+
+# ========== CMake 自动生成文件 ==========
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+install_manifest.txt
+compile_commands.json
+
+# ========== 可选：如果项目使用vcpkg，取消下面 ==========
+# vcpkg/
+# vcpkg_installed/
+
+
+# ====================== CodeBlocks / Dev-C++ / MinGW 工程文件和临时文件===============
+*.cbp
+*.dev
+*.layout
+*.bak
+*.depend
+makefile.win
+
+# ====================== ASM / C / C++ 汇编、C、C++ ======================
+# 编译产物
+*.o
+*.obj
+*.exe
+*.out
+*.dll
+*.so
+*.a
+*.lib
+*.elf
+*.hex
+*.bin
+*.dylib
+*.ilk
+*.log
+*.exp
+# 编译中间文件
+*.i
+*.s
+# 调试文件
+*.pdb
+*.map
+# 临时生成文件
+*.stackdump
+*.gcno
+*.gcda
+
+# Debug/Release目录
+bin/
+obj/
